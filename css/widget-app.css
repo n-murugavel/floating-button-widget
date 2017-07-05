@@ -1,0 +1,371 @@
+*:before,
+*:after {
+	box-sizing: inherit
+}
+
+.ffw-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999999;
+	border: 0;
+	background: #18c;
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: #999 2px 2px 3px;
+	-moz-box-shadow: #999 2px 2px 3px;
+	-ms-box-shadow: #999 2px 2px 3px;
+	-o-box-shadow: #999 2px 2px 3px;
+	box-shadow: #999 2px 2px 3px;
+	-webkit-animation: bot-to-top 2s ease-out;
+	-moz-animation: bot-to-top 2s ease-out;
+	-ms-animation: bot-to-top 2s ease-out;
+	-o-animation: bot-to-top 2s ease-out;
+	animation: bot-to-top 2s ease-out;
+}
+
+.ffw-button:hover {
+	-webkit-box-shadow: #888 0px 1px 10px;
+	-moz-box-shadow: #888 0px 1px 10px;
+	-ms-box-shadow: #888 0px 1px 10px;
+	-o-box-shadow: #888 0px 1px 10px;
+	box-shadow: #888 0px 1px 10px;
+}
+
+.ffw-operations {
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 0 20px;
+}
+
+.ffw-operation {
+	margin-bottom: 10px;
+	list-style: none;
+	position: relative;
+}
+
+.ffw-operation > a {
+	color: #fff;
+	text-decoration: none;
+	border: 0;
+	text-align: center;
+	vertical-align: middle;
+	background: #ccc;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	display: inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: #999 2px 2px 3px;
+	-moz-box-shadow: #999 2px 2px 3px;
+	-ms-box-shadow: #999 2px 2px 3px;
+	-o-box-shadow: #999 2px 2px 3px;
+	box-shadow: #999 2px 2px 3px;
+}
+
+.ffw-operation > a+span {
+	visibility: hidden;
+	background: #887;
+	padding: 5px;
+	color: #fff;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	opacity: 0;
+	white-space: nowrap;
+	z-index: 9999;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transform: translateY(-40px);
+	-moz-transform: translateY(-40px);
+	-ms-transform: translateY(-40px);
+	-o-transform: translateY(-40px);
+	transform: translateY(-40px);
+}
+
+.ffw-operation > a:hover+span {
+	visibility: visible !important;
+	opacity: 1;
+	-webkit-transform: translate(-10px, -40px);
+	-moz-transform: translate(-10px, -40px);
+	-ms-transform: translate(-10px, -40px);
+	-o-transform: translate(-10px, -40px);
+	transform: translate(-10px, -40px);
+}
+
+.ffw-operation .orange {
+	background: #ff6e27;
+}
+
+.ffw-operation .purple {
+	background: #a014d8;
+}
+
+.ffw-operation .green {
+	background: #0a791e;
+}
+
+.ffw-operation .blue {
+	background: #0d00bb;
+}
+
+.ffw-operation > a > i {
+	display: inline-block;
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+	line-height: 50px;
+}
+
+.ffw-operations:hover {
+	visibility: visible!important;
+	opacity: 1!important;
+}
+
+.ffw-button+ul {
+	visibility: hidden;
+}
+
+.ffw-button:hover+ul {
+	visibility: visible;
+	-webkit-animation: scale-in 0.5s;
+	-moz-animation: scale-in 0.5s;
+	-ms-animation: scale-in 0.5s;
+	-o-animation: scale-in 0.5s;
+	animation: scale-in 0.5s;
+}
+
+.ffw-button i {
+	-webkit-animation: rotate-in 0.5s;
+	-moz-animation: rotate-in 0.5s;
+	-ms-animation: rotate-in 0.5s;
+	-o-animation: rotate-in 0.5s;
+	animation: rotate-in 0.5s;
+}
+
+.ffw-button:hover>i {
+	-webkit-animation: rotate-out 0.5s;
+	-moz-animation: rotate-out 0.5s;
+	-ms-animation: rotate-out 0.5s;
+	-o-animation: rotate-out 0.5s;
+	animation: rotate-out 0.5s;
+}
+
+@-webkit-keyframes bot-to-top {
+	0% {
+		bottom: -60px
+	}
+	50% {
+		bottom: 20px
+	}
+}
+
+@-moz-keyframes bot-to-top {
+	0% {
+		bottom: -60px
+	}
+	50% {
+		bottom: 20px
+	}
+}
+
+@-ms-keyframes bot-to-top {
+	0% {
+		bottom: -60px
+	}
+	50% {
+		bottom: 20px
+	}
+}
+
+@-o-keyframes bot-to-top {
+	0% {
+		bottom: -60px
+	}
+	50% {
+		bottom: 20px
+	}
+}
+
+@keyframes bot-to-top {
+	0% {
+		bottom: -60px
+	}
+	50% {
+		bottom: 20px
+	}
+}
+
+@-webkit-keyframes scale-in {
+	from {
+		-webkit-transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes scale-in {
+	from {
+		-moz-transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes scale-in {
+	from {
+		-ms-transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		-ms-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes scale-in {
+	from {
+		-o-transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		-o-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scale-in {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rotate-in {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes rotate-in {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes rotate-in {
+	from {
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes rotate-in {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate-in {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate-out {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+	to {
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+@-moz-keyframes rotate-out {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		-moz-transform: rotate(0deg);
+	}
+}
+
+@-ms-keyframes rotate-out {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+	to {
+		-ms-transform: rotate(0deg);
+	}
+}
+
+@-o-keyframes rotate-out {
+	from {
+		-o-transform: rotate(360deg);
+	}
+	to {
+		-o-transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate-out {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}

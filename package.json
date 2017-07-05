@@ -1,0 +1,19 @@
+{
+  "name": "floating-btn-form",
+  "version": "1.0.0",
+  "description": "floating button that shows form(s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murugavel.N (GBS03602)",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "event-stream": "^3.3.4",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1"
+  },
+  "dependencies": {}
+}
