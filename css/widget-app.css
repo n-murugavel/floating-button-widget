@@ -151,7 +151,7 @@
 	visibility: hidden;
 }
 
-.ffw-btn:hover+.ffw-ops {
+.ffw-btn.active+.ffw-ops {
 	visibility: visible;
 	-webkit-animation: scale-in 0.5s;
 	-moz-animation: scale-in 0.5s;
@@ -369,7 +369,8 @@
 /* Modal Pop-up Styles */
 .ffw-modal {
 	position: absolute;
-	display: none;
+	visibility: hidden;
+	opacity: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -378,6 +379,11 @@
 	-webkit-user-select: auto;
 	-ms-user-select: element;
 	z-index: 5002;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .ffw-modal-container {
 	width: 100%;
@@ -432,9 +438,66 @@
 	color: #000;
 	font-size: 14px;
 	max-width: 400px;
-	padding: 30px 20px 20px;
+	padding: 10px;
 	border-radius: 4px;
 	background: white;
 	box-shadow: 1px 1px 0 rgba(180, 180, 181, 0.2) inset, 0px 0 3px #b4b4b5;
 	margin: auto;
+}
+
+/* Modal Form */
+.ffw-form {
+	font: 14px/18px Arial, Helvetica, sans-serif;
+}
+
+.ffw-form-header {
+	margin: 2px 0 5px;
+	padding: 0;
+	font-size: 15px;
+}
+
+.ffw-form-field {
+	margin: 5px 0;
+}
+
+.ffw-form-label {
+	width: 100px;
+	font-weight: bold;
+}
+
+.ffw-form-text-input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 1px;
+	border: 1px solid #ccc;
+	width: 200px;
+	height: 20px;
+}
+
+.ffw-button {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+	padding: 5px 10px;
+	border: 0;
+	background: #ccc;
+	cursor: pointer;
+	border: 0;
+}
+
+.ffw-form-submit-btn {
+	background: #0a791e;
+}
+
+.ffw-form-cancel-btn {
+	background: #d81414;
 }

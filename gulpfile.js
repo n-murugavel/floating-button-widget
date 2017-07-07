@@ -7,6 +7,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var browserSync = require('browser-sync').create();
 
 gulp.task('clean-vendors', function(cb) {
 	return del(['css/vendors', 'js/vendors'], {
@@ -58,7 +59,7 @@ gulp.task('minify-js', function(cb) {
 });
 
 gulp.task('build', function() {
-	runSequence('clean-vendors', 'clean-build', 'copy-vendors', 'minify-css', 'minify-js', function() {
+	runSequence('clean-vendors', 'clean-build', 'copy-vendors', 'minify-css', 'minify-js', 'watch', function() {
 		console.log('build - done!');
 	});
 });
@@ -72,5 +73,26 @@ gulp.task('clean-for-build', function() {
 gulp.task('build-app', function() {
 	return runSequence('copy-vendors', 'minify-css', 'minify-js', function() {
 		console.log('build app - done!');
+
 	});
+});
+
+gulp.task('browserSync', function () {
+	browserSync.init({
+		server: {
+			baseDir: './',
+			index: 'index-build.html'
+		},
+		https: true,
+		port: 3333
+	});
+});
+
+gulp.task('watch', ['browserSync'], function(cb) {
+	gulp.watch('js/**/*.js', ['minify-js']);
+	gulp.watch('css/**/*.css', ['minify-css']);
+	gulp.watch('*.html').on('change', browserSync.reload);
+	gulp.watch('dist/js/**/*.js').on('change', browserSync.reload);
+	gulp.watch('dist/css/**/*.css').on('change', browserSync.reload);
+	cb();
 });
