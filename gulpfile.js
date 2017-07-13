@@ -79,12 +79,27 @@ gulp.task('build-app', function() {
 
 gulp.task('browserSync', function () {
 	browserSync.init({
+		open: false,
+		browser: 'google chrome',
 		server: {
 			baseDir: './',
 			index: 'index-build.html'
 		},
-		https: true,
-		port: 3333
+		middleware: [
+			{
+				route: '/feedback',
+				handle: function (req, res, next) {
+					res.setHeader('Content-Type', 'application/json');
+					res.end(JSON.stringify({
+						data: 'OK',
+						status: 'success',
+						authorize: true,
+						messages: []
+					}));
+				}
+			}
+		],
+		port: 8082
 	});
 });
 
